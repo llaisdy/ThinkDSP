@@ -18,7 +18,7 @@ import scipy.stats
 import scipy.fftpack
 import struct
 import subprocess
-import thinkplot
+from . import thinkplot
 import warnings
 
 from fractions import gcd
@@ -129,7 +129,7 @@ def read_wave(filename='sound.wav'):
     return wave
 
 
-def play_wave(filename='sound.wav', player='aplay'):
+def play_wave(filename='sound.wav', player='afplay'):
     """Plays a wave file.
 
     filename: string
